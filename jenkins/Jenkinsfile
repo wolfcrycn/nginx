@@ -11,6 +11,7 @@ pipeline {
             stage('build') {
                 steps {
                     echo 'Building..'
+					sh 'chmod a+x ./jenkins/scripts/build.sh'
                     sh './jenkins/scripts/build.sh'
                 }
             }
